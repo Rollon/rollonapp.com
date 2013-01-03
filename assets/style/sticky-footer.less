@@ -1,0 +1,20 @@
+@footerHeight: 100px;
+
+html, body, #wrapper {
+	height: 100%;
+}
+
+#wrapper {
+	height: auto;
+	min-height: 100%;
+	margin: 0 auto -@footerHeight;
+}
+
+#push, footer {
+	height: @footerHeight;
+}
+
+#wrapper :first-child,
+footer :first-child {
+	margin-top: 0;
+}
