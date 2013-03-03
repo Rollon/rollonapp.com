@@ -2,6 +2,7 @@ express = require 'express'
 readability = require 'node-readability'
 
 app = express()
+app.use express.static __dirname + '/public'
 app.use app.router
 app.use (err, req, res, next) ->
 	res.send 500, 'Internal server error'
