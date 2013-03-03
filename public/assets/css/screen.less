@@ -2,18 +2,20 @@
 @import "mixins.less";
 @import "sticky-footer.less";
 
+@blue: #00b7f0;
+
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
 body {
 	font-family: 'Droid Sans', 'Helvetica', 'Arial', sans-serif;
 	font-size: 18px;
 	background: #333;
-	color: #eee;
+	color: #fff;
 	font-weight: normal;
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 54px;
 }
 
 h3 {
@@ -22,12 +24,29 @@ h3 {
 
 header {
 	background: #191919;
-	border-bottom: 2px solid #189fc4;
-	height: 70px;
+	background: #000;
+	border-bottom: 1px solid @blue;
+	height: 65px;
+	//margin-bottom: 20px;
 
 	h1 {
+		.box-sizing();
+
 		//max-width: 150px;
 		//margin: 0 auto;
+		padding: 10px 0 15px;
+		height: 100%;
+		margin: 0 15px;
+		//color: #ddd;
+		text-transform: uppercase;
+		line-height: 45px;
+		font-weight: normal;
+		//font-size: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
 	}
 
 	img {
@@ -39,10 +58,45 @@ header {
 	padding: 20px;
 }
 
+.screenshot {
+	display: block;
+	//width: 384px;
+	max-width: 100%;
+	max-height: 566px;
+	margin: 0 auto;
+	float: right;
+	//float: left;
+	//margin-right: 30px;
+	//margin: 30px;
+	//.box-shadow(0, 0, 50px, rgba(255, 255, 255, 0.99));
+	margin-bottom: 20px;
+	border: 1px solid @blue;
+}
+
+.brand {
+	//color: @blue;
+}
+
+.swapper {
+	display: inline;
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style-type: none;
+		display: none;
+		width: 100%;
+
+		&.active {
+			display: inline;
+		}
+	}
+}
+
 #pitch {
+	//text-align: center;
 
 	img {
-		.box-shadow(0, 0, 30px, rgba(0, 0, 0, 0.75));
 	}
 
 	div {
@@ -50,19 +104,23 @@ header {
 	}
 
 	h3 {
+		//text-align: center;
 		font-weight: normal;
+		//padding: 30px 0 0;
+		padding: 0;
+		margin: 10px 0 8px;
 
-		&:after {
+		/*&:after {
 			content: ': ';
-		}
+		}*/
 	}
 
 	p {
+		display: inline-block;
+		padding-bottom: 2px;
+		line-height: 18px;
 	}
 }
 
-.brand {
-	.roll {
-		font-weight: bold;
-	}
+#play {
 }

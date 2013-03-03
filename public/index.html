@@ -11,29 +11,50 @@
 	<div id="wrapper">
 		<header>
 			<h1><a href="/">
-				<img src="/assets/img/rollon.png" alt="RollOn App" />
+				<img src="/assets/img/rollon_blue.png" alt="RollOn App" />
+				App
 			</a></h1>
 		</header>
 		<div id="content">
+			<img class="screenshot" src="/assets/img/screenshot_app.png" alt="Charlie Sheen, yo" />
 			<div id="pitch">
-				<img src="http://placesheen.com/270/480" alt="Charlie Sheen, yo" />
 				<div>
 					<h3>Problem</h3>
-					<p>You're wasting time when you're {driving|working out|getting ready}. <em>Recapture it.</em></p>
+					<p>You're losing time when you're</p>
+					<ul class="swapper">
+						<li class="active">driving.</li>
+						<li>working out.</li>
+						<li>getting ready.</li>
+					</ul>
 				</div>
 				<div>
-					<h3>Solution</h3>
-					<p><span class="brand"><span class="roll">Roll</span>On</span> reads you {news|RSS|email|sports scores} while you're {driving|working out|getting
-					ready}.</p>
+					<h3>Recapture it.</h3>
+					<p><span class="brand">RollOn</span> reads you</p>
+					<ul class="swapper">
+						<li class="active">news</li>
+						<li>RSS</li>
+						<li>email</li>
+						<li>scores</li>
+					</ul>
+					<p>while you're</p>
+					<ul class="swapper">
+						<li class="active">driving.</li>
+						<li>working out.</li>
+						<li>getting ready.</li>
+					</ul>
 				</div>
+			</div>
+			<div id="play">
+				<a href="http://play.google.com"><img src="http://developer.android.com/images/brand/en_app_rgb_wo_60.png" alt="Android app on Google Play" /></a>
 			</div>
 		</div>
 		<div id="push">
 		</div>
 	</div>
-	<footer>
+	<!--footer>
 		<p>Copyright &copy; 2013 RollOn.</p>
-	</footer>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	</footer-->
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/main.js"></script>
 </body>
 </html>
