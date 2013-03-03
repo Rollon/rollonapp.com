@@ -1,0 +1,68 @@
+@import "normalize.less";
+@import "mixins.less";
+@import "sticky-footer.less";
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+body {
+	font-family: 'Droid Sans', 'Helvetica', 'Arial', sans-serif;
+	font-size: 18px;
+	background: #333;
+	color: #eee;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+header {
+	background: #191919;
+	border-bottom: 2px solid #189fc4;
+	height: 70px;
+
+	h1 {
+		//max-width: 150px;
+		//margin: 0 auto;
+	}
+
+	img {
+		height: 100%;
+	}
+}
+
+#content {
+	padding: 20px;
+}
+
+#pitch {
+
+	img {
+		.box-shadow(0, 0, 30px, rgba(0, 0, 0, 0.75));
+	}
+
+	div {
+		margin: 1em 0;
+	}
+
+	h3 {
+		font-weight: normal;
+
+		&:after {
+			content: ': ';
+		}
+	}
+
+	p {
+	}
+}
+
+.brand {
+	.roll {
+		font-weight: bold;
+	}
+}
