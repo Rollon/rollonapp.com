@@ -1,6 +1,17 @@
+express = require 'express'
 readability = require 'node-readability'
 
-readability.read 'http://www.engadget.com/2013/03/02/nasa-spacex-dragon-capsule-to-reach-iss-on-march-3rd-at-6-01-et/', (err, article) ->
-	#console.log "TITLE: #{article.getTitle()}"
-	#console.log "CONTENT: #{article.getContent()}"
-	console.log article.getContent().replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ')
+app = express()
+app.use app.router
+app.use (err, req, res, next) ->
+	res.send 500, 'Internal server error'
+
+app.get '/article/:url', (req, res, next) ->
+	readability.read req.params.url, (err, article) ->
+		if err then return next err
+
+		res.type 'text/plain'
+		res.send 200, article.getContent().replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ')
+
+app.listen 3001
+
