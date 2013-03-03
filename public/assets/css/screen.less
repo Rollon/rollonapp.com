@@ -9,9 +9,10 @@
 body {
 	font-family: 'Droid Sans', 'Helvetica', 'Arial', sans-serif;
 	font-size: 18px;
-	background: #333;
-	color: #fff;
+	//background: #333;
+	//color: #fff;
 	font-weight: normal;
+	background: #eee;
 }
 
 h1 {
@@ -25,7 +26,8 @@ h3 {
 header {
 	background: #191919;
 	background: #000;
-	border-bottom: 1px solid @blue;
+	//background: #333;
+	border-bottom: 2px solid @blue;
 	height: 65px;
 	//margin-bottom: 20px;
 
@@ -40,6 +42,7 @@ header {
 		//color: #ddd;
 		text-transform: uppercase;
 		line-height: 45px;
+		color: #ddd;
 		font-weight: normal;
 		//font-size: 0;
 	}
@@ -61,6 +64,8 @@ header {
 }
 
 .screenshot {
+	.box-sizing();
+
 	display: block;
 	//width: 384px;
 	max-width: 100%;
@@ -70,9 +75,10 @@ header {
 	//float: left;
 	//margin-right: 30px;
 	//margin: 30px;
-	//.box-shadow(0, 0, 50px, rgba(255, 255, 255, 0.99));
+	.box-shadow(0, 0, 30px, rgba(0, 0, 0, 0.5));
 	margin-bottom: 20px;
-	border: 1px solid @blue;
+	padding: 0px;
+	border: 2px solid #333;
 }
 
 .brand {
