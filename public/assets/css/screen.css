@@ -382,6 +382,9 @@ header a {
 header img {
   height: 100%;
 }
+em {
+  font-size: 80%;
+}
 #content {
   padding: 20px;
   max-width: 960px;
